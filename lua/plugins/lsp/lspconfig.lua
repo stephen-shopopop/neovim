@@ -7,6 +7,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     -- Ajoute les « code actions » de type renommage de fichiers intelligent, etc
     { "antosha417/nvim-lsp-file-operations", config = true },
+    { "folke/lazydev.nvim", opts = {} },
   },
   keys = {
     { "<leader>ca", vim.lsp.buf.code_action, desc = "Code Action", mode = { "n", "v" } },
