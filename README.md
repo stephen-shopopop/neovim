@@ -2,7 +2,7 @@
 
 Clone the project in `~/.config`:
 
-    git clone git@github.com:vjousse/neovim-from-scratch.git ~/.config
+    git clone git@github.com:vjousse/neovim-from-scratch.git ~/.config/nvim
 
 Start `nvim` with this configuration:
 
