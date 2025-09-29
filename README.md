@@ -2,12 +2,16 @@
 
 Clone the project in `~/.config`:
 
-    git clone git@github.com:stephen-shopopop/neovim.git ~/.config/nvim
+    git clone https://github.com/stephen-shopopop/neovim ~/.config/nvim
 
-If you don’t want to override your current `neovim` configuration, you can clone it directly in `~/.config` under the name `neovim-from-scratch`:
+## Helper
 
-    git clone git@github.com:vjousse/neovim-from-scratch.git ~/.config
+- https://github.com/BurntSushi/ripgrep
+- https://www.nerdfonts.com
+- https://wezterm.org
 
-And then start `nvim` with this configuration:
+## Uninstall Linux / MacOS (unix)
 
-    NVIM_APPNAME=nvim-from-scratch nvim
+rm -rf ~/.config/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.local/share/nvim
