@@ -1,0 +1,27 @@
+min_version = "2025.7.7"
+
+[env] # Use the project name derived from the current directory
+PROJECT_NAME = "{{ config_root | basename }}"
+
+[hooks]
+enter = 'mise i -q'
+
+[tools]
+lazydocker = "latest"
+lazygit = "latest"
+neovim = "latest"
+prettier = "latest"
+
+ripgrep = "latest"
+
+
+[tasks.maintenance]
+description = 'Maintenance project'
+run = 'mise uninstall --all'
+
+[tasks.info]
+description = "Print project information"
+run = '''
+echo "Project: $PROJECT_NAME"
+'''
+

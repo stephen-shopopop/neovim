@@ -2,7 +2,7 @@
 
 Clone the project in `~/.config`:
 
-    git clone https://github.com/stephen-shopopop/neovim ~/.config/nvim
+> git clone https://github.com/stephen-shopopop/neovim ~/.config/nvim
 
 ## Helper
 
