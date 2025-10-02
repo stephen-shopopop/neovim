@@ -1,64 +1,65 @@
-# Configuration Neovim 🚀
+# Neovim Configuration 🚀
 
-Une configuration Neovim moderne et complète, optimisée pour le développement avec LSP, autocomplétion, et une interface utilisateur élégante.
+A modern and complete Neovim configuration, optimized for development with LSP, autocompletion, and an elegant user interface.
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- 🎨 **Thème Tokyo Night** - Interface sombre et moderne
-- 🔍 **Telescope** - Recherche floue puissante pour fichiers, buffers, et plus
-- 🌳 **Nvim-tree** - Explorateur de fichiers avec icônes
-- 📝 **LSP intégré** - Support complet du Language Server Protocol
-- ⚡ **Autocomplétion intelligente** - nvim-cmp avec snippets
-- 🎯 **Treesitter** - Mise en évidence syntaxique avancée
-- 🤖 **GitHub Copilot** - Assistant de code IA
-- 🔧 **Mason** - Gestionnaire de LSP, DAP, linters et formatters
-- ✅ **Conform** - Formatage automatique du code
-- 🐙 **Lazygit** - Intégration Git dans Neovim
-- 📊 **Lualine** - Barre de statut élégante
-- 🎭 **Which-key** - Guide des raccourcis clavier
-- 🔔 **Noice** - Interface utilisateur améliorée pour les messages
-- 🌈 **Rainbow delimiters** - Coloration des parenthèses
-- 💬 **Chat** - Intégration de chat IA
-- 📋 **Bufferline** - Gestion des buffers avec onglets
-- 🚨 **Trouble** - Liste des diagnostics et quickfix
-- 📑 **Markdown** - Support amélioré du Markdown
+- 🎨 **Tokyo Night Theme** - Modern dark interface
+- 🔍 **Telescope** - Powerful fuzzy finder for files, buffers, and more
+- 🌳 **Nvim-tree** - File explorer with icons
+- 📝 **Built-in LSP** - Full Language Server Protocol support
+- ⚡ **Intelligent Autocompletion** - nvim-cmp with snippets
+- 🎯 **Treesitter** - Advanced syntax highlighting
+- 🤖 **GitHub Copilot** - AI code assistant
+- 🔧 **Mason** - LSP, DAP, linters and formatters manager
+- ✅ **Conform** - Automatic code formatting
+- 🐙 **Lazygit** - Git integration in Neovim
+- 📊 **Lualine** - Elegant status line
+- 🎭 **Which-key** - Keyboard shortcuts guide
+- 🔔 **Noice** - Enhanced UI for messages
+- 🌈 **Rainbow delimiters** - Colored parentheses
+- 💬 **Chat** - AI chat integration
+- 📋 **Bufferline** - Buffer management with tabs
+- 🚨 **Trouble** - Diagnostics and quickfix list
+- 📑 **Markdown** - Enhanced Markdown support
 
-## 📋 Prérequis
+## 📋 Prerequisites
+
 - https://github.com/BurntSushi/ripgrep
 - https://www.nerdfonts.com
 - https://wezterm.org
 - https://mise.jdx.dev
 - https://vincent.jousse.org/blog/fr/tech/configurer-neovim-comme-ide-a-partir-de-zero-tutoriel-guide/#tldr
 
-Avant d'installer cette configuration, assurez-vous d'avoir :
+Before installing this configuration, make sure you have:
 
-- **Neovim >= 0.9.0** (recommandé : dernière version stable)
-- **Git** - Pour cloner le dépôt
-- **Node.js** - Requis pour certains LSP et GitHub Copilot
-- **Python 3** - Pour certains plugins et LSP
-- **Ripgrep** - Pour la recherche avec Telescope
-- **Une Nerd Font** - Pour l'affichage correct des icônes
+- **Neovim >= 0.9.0** (recommended: latest stable version)
+- **Git** - To clone the repository
+- **Node.js** - Required for some LSP servers and GitHub Copilot
+- **Python 3** - For some plugins and LSP servers
+- **Ripgrep** - For searching with Telescope
+- **A Nerd Font** - For proper icon display
 
-### Outils recommandés
+### Recommended tools
 
-- [Ripgrep](https://github.com/BurntSushi/ripgrep) - Outil de recherche ultra-rapide
-- [Nerd Fonts](https://www.nerdfonts.com) - Polices avec icônes intégrées
-- [WezTerm](https://wezterm.org) - Émulateur de terminal moderne
-- [mise](https://mise.jdx.dev) - Gestionnaire de versions de runtimes (alternative à asdf, nvm, pyenv, etc.)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep) - Ultra-fast search tool
+- [Nerd Fonts](https://www.nerdfonts.com) - Fonts with integrated icons
+- [WezTerm](https://wezterm.org) - Modern terminal emulator
+- [mise](https://mise.jdx.dev) - Runtime version manager (alternative to asdf, nvm, pyenv, etc.)
 
 ## 🚀 Installation
 
-### Installation complète
+### Complete installation
 
-Clonez le projet dans `~/.config/nvim` :
+Clone the project into `~/.config/nvim`:
 
 ```bash
 git clone https://github.com/stephen-shopopop/neovim ~/.config/nvim
 ```
 
-Puis lancez Neovim. Les plugins seront automatiquement installés grâce à **lazy.nvim**.
+Then launch Neovim. Plugins will be automatically installed thanks to **lazy.nvim**.
 
-### Installation des dépendances système
+### System dependencies installation
 
 #### mise
 
@@ -66,7 +67,7 @@ Puis lancez Neovim. Les plugins seront automatiquement installés grâce à **la
 curl -fsSL https://mise.jdx.dev/install.sh | bash
 ```
 
-Ajoutez `mise` à votre shell:
+Add `mise` to your shell:
 
 ```bash
 // For Zsh
@@ -76,7 +77,7 @@ echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
 echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 ```
 
-Puis installez les runtimes nécessaires:
+Then install the required runtimes:
 
 ```bash
 mise install
@@ -88,7 +89,7 @@ mise install
 # Homebrew
 brew install neovim ripgrep fd node python3
 
-# Installer une Nerd Font
+# Install a Nerd Font
 brew tap homebrew/cask-fonts
 brew install --cask font-jetbrains-mono-nerd-font
 ```
@@ -106,12 +107,12 @@ sudo apt install neovim ripgrep fd-find nodejs npm python3 python3-pip
 sudo pacman -S neovim ripgrep fd nodejs npm python python-pip
 ```
 
-## 📦 Serveurs LSP inclus
+## 📦 Included LSP servers
 
-Cette configuration installe automatiquement les serveurs LSP suivants via Mason :
+This configuration automatically installs the following LSP servers via Mason:
 
 - **actionlint** - GitHub Actions
-- **biome** - JavaScript/TypeScript (alternative à ESLint/Prettier)
+- **biome** - JavaScript/TypeScript (alternative to ESLint/Prettier)
 - **markdownlint** - Markdown
 - **cssls** - CSS
 - **elmls** - Elm
@@ -127,111 +128,111 @@ Cette configuration installe automatiquement les serveurs LSP suivants via Mason
 - **yamlls** - YAML
 - **vacuum** - OpenAPI
 
-## ⌨️ Raccourcis clavier principaux
+## ⌨️ Main keyboard shortcuts
 
-La touche **Leader** est définie sur **Espace**.
+The **Leader** key is set to **Space**.
 
-### Généraux
+### General
 
-- `;;` - Sortir du mode insertion (au lieu de `<ESC>`)
-- `<leader>nh` - Effacer le surlignage de la recherche
-- `Shift+I` - Déplacer la ligne/sélection vers le haut (mode visuel)
-- `Shift+K` - Déplacer la ligne/sélection vers le bas (mode visuel)
+- `;;` - Exit insert mode (instead of `<ESC>`)
+- `<leader>nh` - Clear search highlighting
+- `Shift+I` - Move line/selection up (visual mode)
+- `Shift+K` - Move line/selection down (visual mode)
 
-### Navigation et fichiers
+### Navigation and files
 
-- `<leader>ff` - Rechercher un fichier (Telescope)
-- `<leader>fg` - Recherche globale dans les fichiers (Telescope)
-- `<leader>fb` - Liste des buffers (Telescope)
-- `<leader>e` - Toggle l'explorateur de fichiers (Nvim-tree)
+- `<leader>ff` - Find a file (Telescope)
+- `<leader>fg` - Global search in files (Telescope)
+- `<leader>fb` - List buffers (Telescope)
+- `<leader>e` - Toggle file explorer (Nvim-tree)
 
-### LSP et code
+### LSP and code
 
-- `gd` - Aller à la définition
-- `gr` - Afficher les références
-- `K` - Afficher la documentation (hover)
-- `<leader>ca` - Actions de code (code actions)
-- `<leader>rn` - Renommer le symbole
-- `[d` / `]d` - Diagnostic précédent/suivant
+- `gd` - Go to definition
+- `gr` - Show references
+- `K` - Show documentation (hover)
+- `<leader>ca` - Code actions
+- `<leader>rn` - Rename symbol
+- `[d` / `]d` - Previous/next diagnostic
 
 ### Git
 
-- `<leader>gg` - Ouvrir Lazygit
-- `<leader>gd` - Afficher le diff Git
+- `<leader>gg` - Open Lazygit
+- `<leader>gd` - Show Git diff
 
-Pour voir tous les raccourcis disponibles, appuyez sur `<leader>` et attendez que **Which-key** affiche le guide.
+To see all available shortcuts, press `<leader>` and wait for **Which-key** to display the guide.
 
-## 🛠️ Personnalisation
+## 🛠️ Customization
 
-### Structure du projet
+### Project structure
 
-```
+```bash
 ~/.config/nvim/
-├── init.lua                 # Point d'entrée principal
+├── init.lua                 # Main entry point
 ├── lua/
-│   ├── core/               # Configuration de base
-│   │   ├── init.lua        # Chargement des modules core
-│   │   ├── options.lua     # Options Neovim
-│   │   └── keymaps.lua     # Raccourcis clavier globaux
+│   ├── core/               # Base configuration
+│   │   ├── init.lua        # Loading core modules
+│   │   ├── options.lua     # Neovim options
+│   │   └── keymaps.lua     # Global keybindings
 │   ├── config/
-│   │   └── lazy.lua        # Configuration du gestionnaire de plugins
-│   └── plugins/            # Configuration des plugins
+│   │   └── lazy.lua        # Plugin manager configuration
+│   └── plugins/            # Plugin configurations
 │       ├── init.lua
-│       ├── lsp/            # Configuration LSP
+│       ├── lsp/            # LSP configuration
 │       │   ├── mason.lua
 │       │   └── lspconfig.lua
 │       ├── telescope.lua
 │       ├── nvim-tree.lua
 │       ├── treesitter.lua
 │       └── ...
-└── lazy-lock.json          # Verrouillage des versions de plugins
+└── lazy-lock.json          # Plugin version lockfile
 ```
 
-### Ajouter un plugin
+### Adding a plugin
 
-Créez un nouveau fichier dans `lua/plugins/` :
+Create a new file in `lua/plugins/`:
 
 ```lua
 return {
-  "auteur/nom-du-plugin",
+  "author/plugin-name",
   config = function()
-    -- Configuration du plugin
+    -- Plugin configuration
   end,
 }
 ```
 
-### Ajouter un serveur LSP
+### Adding an LSP server
 
-Éditez `lua/plugins/lsp/mason.lua` et ajoutez le serveur dans `ensure_installed`.
+Edit `lua/plugins/lsp/mason.lua` and add the server to `ensure_installed`.
 
-## 🔧 Commandes utiles
+## 🔧 Useful commands
 
-### Gestion des plugins (Lazy.nvim)
+### Plugin management (Lazy.nvim)
 
-- `:Lazy` - Ouvrir l'interface Lazy
-- `:Lazy sync` - Mettre à jour tous les plugins
-- `:Lazy clean` - Supprimer les plugins non utilisés
+- `:Lazy` - Open Lazy interface
+- `:Lazy sync` - Update all plugins
+- `:Lazy clean` - Remove unused plugins
 
-### LSP et Mason
+### LSP and Mason
 
-- `:Mason` - Ouvrir l'interface Mason
-- `:LspInfo` - Informations sur les serveurs LSP actifs
-- `:LspRestart` - Redémarrer le serveur LSP
+- `:Mason` - Open Mason interface
+- `:LspInfo` - Information about active LSP servers
+- `:LspRestart` - Restart LSP server
 
 ### Diagnostics
 
-- `:Trouble` - Ouvrir la liste des diagnostics
-- `:TroubleToggle` - Toggle la fenêtre Trouble
+- `:Trouble` - Open diagnostics list
+- `:TroubleToggle` - Toggle Trouble window
 
-## 📚 Ressources
+## 📚 Resources
 
-- [Documentation Neovim](https://neovim.io/doc/)
-- [Guide de configuration Neovim](https://vincent.jousse.org/blog/fr/tech/configurer-neovim-comme-ide-a-partir-de-zero-tutoriel-guide/#tldr)
-- [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim) - Liste de plugins
+- [Neovim Documentation](https://neovim.io/doc/)
+- [Neovim Configuration Guide](https://vincent.jousse.org/blog/fr/tech/configurer-neovim-comme-ide-a-partir-de-zero-tutoriel-guide/#tldr)
+- [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim) - Plugin list
 
-## 🗑️ Désinstallation (Linux / macOS)
+## 🗑️ Uninstallation (Linux / macOS)
 
-Pour supprimer complètement Neovim et cette configuration :
+To completely remove Neovim and this configuration:
 
 ```bash
 rm -rf ~/.config/nvim
@@ -242,15 +243,15 @@ rm -rf ~/.cache/nvim
 
 ## 📝 Notes
 
-- Cette configuration utilise **lazy.nvim** comme gestionnaire de plugins
-- Les plugins sont installés automatiquement au premier lancement
-- La configuration est compatible avec Neovim 0.9.0+
-- Les LSP sont gérés via **Mason** pour une installation simplifiée
+- This configuration uses **lazy.nvim** as plugin manager
+- Plugins are installed automatically on first launch
+- The configuration is compatible with Neovim 0.9.0+
+- LSP servers are managed via **Mason** for simplified installation
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-N'hésitez pas à ouvrir une issue ou une pull request pour proposer des améliorations !
+Feel free to open an issue or pull request to suggest improvements!
 
-## 📄 Licence
+## 📄 License
 
-Cette configuration est libre d'utilisation et de modification.
+This configuration is free to use and modify.
