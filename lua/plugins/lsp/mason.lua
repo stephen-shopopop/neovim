@@ -30,7 +30,6 @@ return {
       -- Ça permettra à votre configuration d'être plus portable
       ensure_installed = {
         "actionlint",
-        "denols",
         "biome",
         "markdownlint",
         "cssls",
