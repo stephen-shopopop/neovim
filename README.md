@@ -24,6 +24,11 @@ Une configuration Neovim moderne et complète, optimisée pour le développement
 - 📑 **Markdown** - Support amélioré du Markdown
 
 ## 📋 Prérequis
+- https://github.com/BurntSushi/ripgrep
+- https://www.nerdfonts.com
+- https://wezterm.org
+- https://mise.jdx.dev
+- https://vincent.jousse.org/blog/fr/tech/configurer-neovim-comme-ide-a-partir-de-zero-tutoriel-guide/#tldr
 
 Avant d'installer cette configuration, assurez-vous d'avoir :
 
